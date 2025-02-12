@@ -1,56 +1,55 @@
 # WeChat
 
-**WeChat** é uma aplicação responsiva de chat em tempo real, onde os usuários podem se cadastrar e se conectar com amigos instantaneamente. A aplicação utiliza as seguintes tecnologias e funcionalidades:
+**WeChat** is a responsive real-time chat application where users can sign up and instantly connect with friends. The application uses the following technologies and features:
 
-## Funcionalidades
+## Features
 
-- **Cadastro de Usuário**: Permite que novos usuários se cadastrem facilmente.
-- **Autenticação**: Utiliza OAuth2 para autenticação de usuários e 2FA (autenticação de dois fatores) para maior segurança.
-- **WebSockets**: Implementação de WebSockets para entrega de mensagens em tempo real.
-- **Busca Avançada**: Utiliza ElasticSearch para realizar buscas rápidas e eficientes.
-- **Frontend**: Desenvolvido com React e estilizado com Tailwind CSS para uma interface moderna e responsiva.
+- **User Registration:**: Allows new users to sign up easily.
+- **Authentication**: Uses OAuth2 for user authentication and 2FA (two-factor authentication) for enhanced security.
+- **WebSockets**: Implements WebSockets for real-time message delivery.
+- **Advanced Search**: Uses ElasticSearch for fast and efficient searches.
+- **Frontend**: Built with React and styled with Tailwind CSS for a modern and responsive interface.
 
-## Tecnologias
+## Technologies
 
 - **Ruby**: 3.2.2
 - **Rails**: 7.2.1.2
 
-## Configuração do Ambiente
+## Environment Setup
 
-### Pré-requisitos
+### Prerequisites
 
-Antes de executar o projeto, você precisa ter o Docker instalado em sua máquina. Além disso, certifique-se de que o ElasticSearch está instalado e em execução, pois a aplicação depende dele para a funcionalidade de busca.
+Before running the project, you need to have Docker installed on your machine. Additionally, make sure that ElasticSearch is installed and running, as the application depends on it for search functionality.
 
-### Comandos Docker
+### Docker Commands
 
-Para gerenciar a aplicação usando Docker, utilize os seguintes comandos:
-
-- **Acessar o Container Docker**:
+To manage the application using Docker, use the following commands:
+- **Access the Docker container:**:
   ```bash
   docker-compose exec web bash
 
 
-- Iniciar o Console Rails:
+- Start the Rails console:
 
   ```bash
   docker-compose exec web rails console
 
-- Parar os Containers Docker:
+- Stop Docker containers:
 
   ```bash
   docker-compose down
 
-- Iniciar os Containers Docker:
+- Start Docker containers:
 
   ```bash
   docker-compose up --build
 
-- Rodar testes:
+- Run tests:
 
   ```bash
   docker-compose exec web bundle exec rspec
 
-- Recriar ambiente de teste:
+- Recreate test environment:
 
   ```bash
   docker-compose exec web bin/rails db:environment:set RAILS_ENV=test
